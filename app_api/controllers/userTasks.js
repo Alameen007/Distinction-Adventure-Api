@@ -20,7 +20,7 @@ module.exports.addingUserTask = function(req, res) {
   task.description = req.body.description;
   task.category = req.body.category;
   task.url = req.body.url;
-  task. = req.body.status;
+  task.status = req.body.status;
 
 
   task.save(function(err) {

@@ -46,7 +46,6 @@ process.on('SIGTERM', function() {
 });
 
 // BRING IN YOUR SCHEMAS & MODELS
-require('./categories');
 require('./task');
 require('./userTasks');
 require('./users');

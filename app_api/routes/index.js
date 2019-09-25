@@ -6,9 +6,9 @@ var auth = jwt({
   userProperty: 'payload'
 });
 
+
 var ctrlAuth = require('../controllers/authentication');
 var user = require('../controllers/user');
-var categories = require('../controllers/categories');
 var task = require('../controllers/task');
 
 
@@ -16,7 +16,6 @@ var task = require('../controllers/task');
 router.post('/register', ctrlAuth.register);
 router.post('/login', ctrlAuth.login);
 router.get('/users/:userId', user.getUser);
-router.get('/categories/:categoriesId', categories.getCategories);
 router.post('/task', task.addingTask);
 router.get('/tasks/:userId', user.getUserTasks);
 router.get('/tasks/:userId/task/:taskId', user.updateTaskStatus);
